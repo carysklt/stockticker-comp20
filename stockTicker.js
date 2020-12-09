@@ -1,9 +1,10 @@
 const fs = require('fs');
+var url = require('url');
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
+const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
 
 function main(){
-  MongoClient.connect(url, function(err, db) {
+  MongoClient.connect(link, function(err, db) {
     if(err) { return console.log(err); }
   
     //indicate database and collection
