@@ -6,13 +6,13 @@ const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?ret
 
 console.log("hello world");
 http.createServer(function (req, res) {
-  fs.createReadStream('./index.html').pipe(res);
+//   fs.createReadStream('./index.html').pipe(res);
+fs.readFile('./index.html', function (err, html) {
   MongoClient.connect(link, function(err, db) {
     if(err) { throw err; }
   
     //take querystring from html form and parse it
     res.writeHead(200, {'Content-Type': 'text/html'});
-//     fs.createReadStream('index.html').pipe(res);
     var q = url.parse(req.url, true).query;
     var whichOne = q.choice;
     var what = q.querystring;
@@ -34,4 +34,5 @@ http.createServer(function (req, res) {
 
     db.close();
   });
+});
 }).listen(process.env.PORT||3000);
