@@ -33,5 +33,4 @@ http.createServer(function (req, res) {
 
     db.close();
   });
-});
 }).listen(process.env.PORT||3000);
