@@ -6,7 +6,7 @@ const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?ret
 
 console.log("hello world");
 http.createServer(function (req, res) {
-  fs.createReadStream('index.html').pipe(res);
+  fs.createReadStream('./index.html').pipe(res);
   MongoClient.connect(link, function(err, db) {
     if(err) { throw err; }
   
