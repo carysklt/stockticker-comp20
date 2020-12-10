@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
     var collection = dbo.collection('companies');
     if(q.choice === "companyName"){
       var result = collection.find({"Company": q.querystring});
-      console.log(result);
+      console.log(result.Company);
     } else {
       collection.find({"Ticker": q.querystring});
     }
