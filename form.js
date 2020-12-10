@@ -23,13 +23,11 @@ http.createServer(function (req, res) {
     } else {
       collection.find({"Ticker": q.querystring});
     }
-  // var qobj = url.parse(req.url, true).query;
-  // var txt = qobj.name;   // assume x is querystring parameter
   
   //check whether it is company or ticker
   //take the info and search for it
   
-    // res.end("The value is: " + what);
+//     res.end("The value is: " + what);
 
     db.close();
   });
