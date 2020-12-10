@@ -1,1 +1,1 @@
-web: node stockTicker.js
+web: node index.js
