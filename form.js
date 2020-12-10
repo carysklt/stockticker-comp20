@@ -33,16 +33,4 @@ http.createServer(function (req, res) {
 
     db.close();
   });
-}).listen(8080);
-
-
-// theQuery = {author:"Bob Smith"};
-// coll.find(theQuery).toArray(function(err, items) 
-// {if (err) {console.log("Error: " + err);} 
-// else 
-// {
-//   console.log("Items: ");
-// for (i=0; i<items.length; i++)
-// console.log(i + ": " + items[i].title + " by: " + items[i].author);
-// }  
-//  db.close();
+}).listen(process.env.PORT || 3000);
