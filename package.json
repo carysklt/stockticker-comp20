@@ -2,9 +2,9 @@
   "name": "helloapp",
   "version": "1.0.0",
   "description": "node app ",
-  "main": "form.js",
+  "main": "hello_app.js",
   "scripts": {
-    "start": "node form.js"
+    "start": "node hello_app.js"
   },
   "repository": {
     "type": "git",
