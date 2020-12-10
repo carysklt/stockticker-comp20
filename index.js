@@ -28,7 +28,7 @@ http.createServer(function (req, res) {
   //check whether it is company or ticker
   //take the info and search for it
   
-//     res.end("The value is: " + what);
+    res.end("The value is: " + what);
 
     db.close();
   });
