@@ -18,9 +18,11 @@ http.createServer(function (req, res) {
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
      collection.findOne({"Company": q.querystring},function(err,result){
-       thing = result.Ticker;
+      var answer = result.Ticker;
      });
   });
+  
+  thing = answer;
    if(q.choice === "companyName"){
 //      collection.findOne({"Company": q.querystring},function(err,result){
        res.end("The stock ticker for " + q.querystring + " is " + thing);
