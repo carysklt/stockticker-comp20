@@ -1,4 +1,3 @@
-// // const fs = require('fs');
 
 // app.get('/', function(req,res){
 // //   MongoClient.connect(link, function(err, db) {
@@ -20,6 +19,7 @@ const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?ret
 
 http.createServer(function (req, res) {
   MongoClient.connect(link, function(err,db){
+     if (err) {throw err;}
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
