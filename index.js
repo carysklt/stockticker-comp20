@@ -23,14 +23,13 @@ http.createServer(function (req, res) {
   //indicate database and collection
 //   var dbo = db.db('StockTicker');
 //   var collection = dbo.collection('companies');
-  
+   });
   res.writeHead(200, {'Content-Type': 'text/html'});
   //take query string from html form and parse it
   var q = url.parse(req.url, true).query;
   var whichOne = q.choice;
   var what = q.querystring;
   
-  });
   res.end("The value is: " + txt + what);
   //db.close();
 }).listen(process.env.PORT||8080);
