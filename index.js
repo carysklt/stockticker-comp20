@@ -1,7 +1,7 @@
 var http = require('http');
 var url = require('url');
 const MongoClient = require('mongodb').MongoClient;
-const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
+const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/StockTicker?retryWrites=true&w=majority";
 
 http.createServer(function (req, res) {
 
