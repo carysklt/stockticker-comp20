@@ -12,7 +12,7 @@ app.get('/', function(req,res){
 //     if(err) { throw err; }
   
 //     //take querystring from html form and parse it
-//     res.writeHead(200, {'Content-Type': 'text/html'});
+    res.writeHead(200, {'Content-Type': 'text/html'});
 //     var q = url.parse(req.url, true).query;
 //     var whichOne = q.choice;
 //     var what = q.querystring;
@@ -30,7 +30,7 @@ app.get('/', function(req,res){
 //   //check whether it is company or ticker
 //   //take the info and search for it
   
-//     res.end("The value is: " + what);
+    res.end("The value is: " + what);
 
 //     db.close();
 //   });
