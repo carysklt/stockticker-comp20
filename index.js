@@ -30,7 +30,7 @@ http.createServer(function (req, res) {
 //       collection.find({"Ticker": q.querystring});
       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
     }
-//     db.close();
-//   });
+    db.close();
+  });
 }).listen(process.env.PORT||8080);
 
