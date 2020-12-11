@@ -20,7 +20,7 @@ http.createServer(function (req, res) {
    if(q.choice === "companyName"){
      collection.findOne({"Company": q.querystring}).toArray(function(err,result){
        res.end("The stock ticker for " + q.querystring + " is " + result.Ticker);
-     }
+     });
     } else {
 //       collection.find({"Ticker": q.querystring});
       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
