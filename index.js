@@ -27,15 +27,6 @@
 // //       collection.find({"Ticker": q.querystring});
 // //     }
   
-// //   //check whether it is company or ticker
-// //   //take the info and search for it
-  
-//     res.end("The value is: ");
-
-// //     db.close()
-// //   });
-  
-// app.listen(port);
 
 var http = require('http');
 var url = require('url');
@@ -43,8 +34,11 @@ var url = require('url');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   var txt = "Hello world";
-//   var qobj = url.parse(req.url, true).query;
-//   var txt = qobj.name;   // assume x is querystring parameter
-  res.end("The value is: " + txt);
+  var q = url.parse(req.url, true).query;
+  var whichOne = q.choice;
+  var what = q.querystring;
+  
+  res.end("The value is: " + txt + what);
+  //db.close();
 }).listen(process.env.PORT||8080);
 
