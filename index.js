@@ -16,16 +16,18 @@ http.createServer(function (req, res) {
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
-     res.end("Hello");
+     collection.findOne({"Company": q.querystring},function(err,result){
+       var thing = result.Ticker;
+     });
   });
-//    if(q.choice === "companyName"){
-// //      collection.findOne({"Company": q.querystring},function(err,result){
-//        res.end("The stock ticker for " + q.querystring + " is ");
-// //      });
-//     } else {
-// //       collection.find({"Ticker": q.querystring});
-//       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
-//     }
+   if(q.choice === "companyName"){
+//      collection.findOne({"Company": q.querystring},function(err,result){
+       res.end("The stock ticker for " + q.querystring + " is " + thing);
+//      });
+    } else {
+//       collection.find({"Ticker": q.querystring});
+      res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
+    }
 //     db.close();
 //   });
 }).listen(process.env.PORT||8080);
