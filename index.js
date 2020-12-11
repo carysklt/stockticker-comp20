@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
   var what = q.querystring;
   
    if(q.choice === "companyName"){
-//       var result = collection.find({"Company": q.querystring});
+     var result = collection.find({"Company": q.querystring});
      res.end("The stock ticker for " + q.querystring + " is ");
     } else {
 //       collection.find({"Ticker": q.querystring});
