@@ -11,13 +11,14 @@ http.createServer(function (req, res) {
   var q = url.parse(req.url, true).query;
   var whichOne = q.choice;
   var what = q.querystring;
+  var thing = "hello";
   
    MongoClient.connect(link, function(err,db){
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
      collection.findOne({"Company": q.querystring},function(err,result){
-       var thing = result.Ticker;
+       thing = result.Ticker;
      });
   });
    if(q.choice === "companyName"){
