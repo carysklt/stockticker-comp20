@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
   var what = q.querystring;
   
    if(q.choice === "companyName"){
-     collection.findOne({"Company": q.querystring}).toArray(function(err,result){
+     collection.findOne({"Company": q.querystring},function(err,result){
        res.end("The stock ticker for " + q.querystring + " is " + result.Ticker);
      });
     } else {
