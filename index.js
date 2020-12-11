@@ -25,7 +25,7 @@ http.createServer(function (req, res) {
         console.log("Ticker");
     }
     
-  res.end("The value is: " + what);
+  res.end("The value is: " + whichOne + what);
   //db.close();
 }).listen(process.env.PORT||8080);
 
