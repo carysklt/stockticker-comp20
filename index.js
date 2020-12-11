@@ -1,17 +1,3 @@
-
-// app.get('/', function(req,res){
-// //   MongoClient.connect(link, function(err, db) {
-// //     if(err) { throw err; }
-    
-
-// //     if(q.choice === "companyName"){
-// //       var result = collection.find({"Company": q.querystring});
-// //       console.log(result.Company);
-// //     } else {
-// //       collection.find({"Ticker": q.querystring});
-// //     }
-  
-
 var http = require('http');
 var url = require('url');
 const MongoClient = require('mongodb').MongoClient;
@@ -19,7 +5,6 @@ const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?ret
 
 http.createServer(function (req, res) {
   MongoClient.connect(link, function(err,db){
-     if (err) {throw err;}
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
@@ -32,6 +17,14 @@ http.createServer(function (req, res) {
   var whichOne = q.choice;
   var what = q.querystring;
   
+   if(q.choice === "companyName"){
+//       var result = collection.find({"Company": q.querystring});
+      console.log("Company");
+    } else {
+//       collection.find({"Ticker": q.querystring});
+        console.log("Ticker");
+    }
+    
   res.end("The value is: " + what);
   //db.close();
 }).listen(process.env.PORT||8080);
