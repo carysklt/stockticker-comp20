@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
      var collection = dbo.collection('companies');
      collection.findOne({"Company": q.querystring},function(err,result){
       var answer = result.Ticker;
-       alert(result.Ticker);
+       console.log(result.Ticker);
      });
   });
 
