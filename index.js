@@ -26,11 +26,12 @@ http.createServer(function (req, res) {
 //    });
   res.writeHead(200, {'Content-Type': 'text/html'});
   //take query string from html form and parse it
+  
   var q = url.parse(req.url, true).query;
   var whichOne = q.choice;
   var what = q.querystring;
   
-  res.end("The value is: " + txt + what);
+  res.end("The value is: " + what);
   //db.close();
 }).listen(process.env.PORT||8080);
 
