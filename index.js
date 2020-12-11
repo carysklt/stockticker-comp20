@@ -19,18 +19,18 @@ http.createServer(function (req, res) {
   
    if(q.choice === "companyName"){
 //       var result = collection.find({"Company": q.querystring});
-      console.log("Company");
+     res.end("The stock ticker for" + q.querystring + "is");
     } else {
 //       collection.find({"Ticker": q.querystring});
         console.log("Ticker");
     }
     
-  res.end(
-    if (q.choice === "companyName") {
-    "The company you searched has the following stock ticker:";
-  }
-//     "The value is: " + whichOne + what
-  );
+//   res.end(
+//     if (q.choice === "companyName") {
+//     "The company you searched has the following stock ticker:";
+//   }
+// //     "The value is: " + whichOne + what
+//   );
   //db.close();
 }).listen(process.env.PORT||8080);
 
