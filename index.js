@@ -1,13 +1,13 @@
-const express = require ('express')
-const app = express()
-var url = require('url')
-const port = process.env.PORT || 3000
+const express = require ('express');
+const app = express();
+var url = require('url');
+const port = process.env.PORT || 3000;
 // const fs = require('fs');
 // const MongoClient = require('mongodb').MongoClient;
 // const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
 
 app.get('/', function(req,res){
-  console.log("hello world")
+  console.log("hello world");
 //   MongoClient.connect(link, function(err, db) {
 //     if(err) { throw err; }
   
@@ -30,9 +30,9 @@ app.get('/', function(req,res){
 //   //check whether it is company or ticker
 //   //take the info and search for it
   
-    res.end("The value is: ")
+    res.end("The value is: ");
 
 //     db.close()
 //   });
   
-app.listen(port)
+app.listen(port);
