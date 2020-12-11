@@ -1,7 +1,7 @@
 var http = require('http');
 var url = require('url');
 const MongoClient = require('mongodb').MongoClient;
-const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/StockTicker?retryWrites=true&w=majority";
+const link = 'mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/StockTicker?retryWrites=true&w=majority';
 
 http.createServer(function (req, res) {
 
@@ -16,17 +16,17 @@ http.createServer(function (req, res) {
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
-
-//   });
-   if(q.choice === "companyName"){
-//      collection.findOne({"Company": q.querystring},function(err,result){
-       res.end("The stock ticker for " + q.querystring + " is ");
-//      });
-    } else {
-//       collection.find({"Ticker": q.querystring});
-      res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
-    }
-    db.close();
+     res.end("Hello");
   });
+//    if(q.choice === "companyName"){
+// //      collection.findOne({"Company": q.querystring},function(err,result){
+//        res.end("The stock ticker for " + q.querystring + " is ");
+// //      });
+//     } else {
+// //       collection.find({"Ticker": q.querystring});
+//       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
+//     }
+//     db.close();
+//   });
 }).listen(process.env.PORT||8080);
 
