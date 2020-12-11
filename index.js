@@ -25,7 +25,12 @@ http.createServer(function (req, res) {
         console.log("Ticker");
     }
     
-  res.end("The value is: " + whichOne + what);
+  res.end(
+    if (q.choice === "companyName") {
+    "The company you searched has the following stock ticker:";
+  }
+//     "The value is: " + whichOne + what
+  );
   //db.close();
 }).listen(process.env.PORT||8080);
 
