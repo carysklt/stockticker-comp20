@@ -17,9 +17,9 @@ http.createServer(function (req, res) {
   var what = q.querystring;
   
    if(q.choice === "companyName"){
-     collection.findOne({"Company": q.querystring},function(err,result){
-       res.end("The stock ticker for " + q.querystring + " is " + result.Ticker);
-     });
+//      collection.findOne({"Company": q.querystring},function(err,result){
+       res.end("The stock ticker for " + q.querystring + " is ");
+//      });
     } else {
 //       collection.find({"Ticker": q.querystring});
       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
