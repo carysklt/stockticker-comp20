@@ -22,6 +22,7 @@
   "homepage": "",
   "dependencies": {
     "calendar": "^0.1.1",
-    "mongodb": "^3.6.3"
+    "mongodb": "^3.6.3",
+    "express": "^4.17.1"
   }
 }
