@@ -16,7 +16,7 @@ http.createServer(function (req, res) {
   //indicate database and collection
      var dbo = db.db('StockTicker');
      var collection = dbo.collection('companies');
-  });
+
 //   });
    if(q.choice === "companyName"){
 //      collection.findOne({"Company": q.querystring},function(err,result){
@@ -26,6 +26,6 @@ http.createServer(function (req, res) {
 //       collection.find({"Ticker": q.querystring});
       res.end("The company/ies that have the stock ticker " + q.querystring + " is/are ");
     }
-//   });
+  });
 }).listen(process.env.PORT||8080);
 
