@@ -21,8 +21,7 @@ http.createServer(function (req, res) {
       var answer = result.Ticker;
      });
   });
-  
-  thing = answer;
+
    if(q.choice === "companyName"){
 //      collection.findOne({"Company": q.querystring},function(err,result){
        res.end("The stock ticker for " + q.querystring + " is " + thing);
