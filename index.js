@@ -1,7 +1,3 @@
-// const express = require ('express');
-// const app = express();
-// var url = require('url');
-// const port = process.env.PORT || 3000;
 // // const fs = require('fs');
 // // const MongoClient = require('mongodb').MongoClient;
 // // const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
@@ -30,6 +26,8 @@
 
 var http = require('http');
 var url = require('url');
+const MongoClient = require('mongodb').MongoClient;
+const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?retryWrites=true&w=majority";
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
