@@ -21,8 +21,8 @@ const link = "mongodb+srv://carysklt:carysklt123@cluster0.nipyz.mongodb.net/?ret
 http.createServer(function (req, res) {
   MongoClient.connect(link, function(err,db){
   //indicate database and collection
-//   var dbo = db.db('StockTicker');
-//   var collection = dbo.collection('companies');
+     var dbo = db.db('StockTicker');
+     var collection = dbo.collection('companies');
    });
     
   res.writeHead(200, {'Content-Type': 'text/html'});
